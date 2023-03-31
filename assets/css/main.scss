@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid #00000033;
+  // outline: 1px solid #00000033;
+}
+
+html, body {
+  font-family: 'Alkatra', 'Noto Sans TC', sans-serif;
 }
 
 a,
-a:visited {
+a.visited {
   text-decoration: none;
-  color: inherit;
 }
+
+.btn {
+  transition: all .25s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
