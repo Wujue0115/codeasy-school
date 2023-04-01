@@ -1,8 +1,5 @@
 <template>
   <div id="teacher-card">
-    <section>
-      
-    </section>
     <div id="header">
       <span id="name">
         <slot name="name"></slot>
@@ -37,16 +34,21 @@ export default {
 <style lang="scss" scoped>
 #teacher-card {
   padding: 1rem;
+  width: 360px;
+  height: auto;
+  background-color: #fff;
   border-radius: 5px;
   box-shadow: 3px 3px 8px #00000055;
   color: #000000aa;
 
   #header {
     #name {
-      color: #000;
       font-size: 2rem;
       line-height: 2rem;
       letter-spacing: 2px;
+      background: -webkit-linear-gradient($secondary-color, $tertiary-color);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     #rating {
       #star {

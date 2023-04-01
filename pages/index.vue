@@ -22,6 +22,7 @@ export default {
   #index-page {
     width: 100vw;
     height: 100vh;
+    background-color: $primary-color;
     display: grid;
     grid-template: repeat(12, 1fr) / repeat(12, 1fr);
 
@@ -37,7 +38,7 @@ export default {
       }
 
       p#title {
-        background: -webkit-linear-gradient(45deg, #ffaa00, #df6161);
+        background: -webkit-linear-gradient($secondary-color, $tertiary-color);
         font-size: 5rem;
         font-weight: bold;
         line-height: 5rem;
@@ -61,7 +62,7 @@ export default {
       .link-btn {
         margin: auto;
         padding: .25rem 3rem;
-        background: -webkit-linear-gradient( #ffaa00, #df6161);
+        background: -webkit-linear-gradient($secondary-color, $tertiary-color);
         box-shadow: 3px 3px 8px #000000aa;
         border-radius: 5px;
         font-size: 2rem;
