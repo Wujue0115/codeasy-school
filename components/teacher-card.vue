@@ -64,9 +64,17 @@ export default {
 
   #info {
     display: flex;
+    @include rwd($small-size) {
+      @include flexbox(column, center, flex-start);
+    }
+
     span {
       &:not(:first-child) {
         padding-left: 2rem;
+
+        @include rwd($small-size) {
+          padding-left: 0;
+        }
       }
     }
   }

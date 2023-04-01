@@ -129,18 +129,25 @@ export default {
   #container {
     padding: 2rem;
     background-color: var(--primary-color);
+    @include rwd($small-size) {
+      padding: 1rem;
+    }
+
     #search-pane {
       @include flexbox(column, center, center);
       padding: 1rem;
       border-radius: 5px 5px 0 0;
       border-bottom: 2px solid var(--secondary-color);
+      @include rwd($small-size) {
+        padding-top: 0;
+      }
 
       & > *:not(:first-child) {
         @include flexbox(row);
       }
 
       .filter-btn {
-        margin-top: .25rem;
+        margin-top: 1rem;
         color: var(--secondary-color);
         cursor: pointer;
       }
@@ -160,6 +167,9 @@ export default {
 
       & > * {
         margin: 2rem 0 0;
+        @include rwd($small-size) {
+          margin: 1rem 0 0;
+        }
       }
     }
   }

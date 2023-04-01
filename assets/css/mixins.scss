@@ -5,3 +5,9 @@
   align-items: $align-items;
   flex-wrap: $flex-wrap;
 }
+
+@mixin rwd($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}

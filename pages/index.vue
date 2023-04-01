@@ -43,10 +43,16 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include rwd($small-size) {
+        grid-area: 2 / 2 / span 6 / -2;
+      }
 
       p {
         padding: 0 4rem;
         text-align: left;
+        @include rwd($small-size) {
+          padding: 0;
+        }
       }
 
       p#title {
@@ -70,6 +76,9 @@ export default {
     #right-pane {
       grid-area: 2 / 8 / -2 / span 4;
       display: grid;
+      @include rwd($small-size) {
+        grid-area: 8 / 2 / span 3 / -2;
+      }
 
       .link-btn {
         margin: auto;
