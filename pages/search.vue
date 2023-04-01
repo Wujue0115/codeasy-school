@@ -128,12 +128,12 @@ export default {
 #search-page {
   #container {
     padding: 2rem;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     #search-pane {
       @include flexbox(column, center, center);
       padding: 1rem;
       border-radius: 5px 5px 0 0;
-      border-bottom: 1px solid #000;
+      border-bottom: 2px solid var(--secondary-color);
 
       & > *:not(:first-child) {
         @include flexbox(row);
@@ -141,12 +141,12 @@ export default {
 
       .filter-btn {
         margin-top: .25rem;
-        color: $secondary-color;
+        color: var(--secondary-color);
         cursor: pointer;
       }
 
       #other-conditions-pane {
-        @include flexbox(column, center, start);
+        @include flexbox(column, center, flex-start);
         & > * {
           @include flexbox(row, space-between);
         }

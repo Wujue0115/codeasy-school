@@ -34,7 +34,7 @@ export default {
   #index-page {
     width: 100vw;
     height: 100vh;
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     display: grid;
     grid-template: repeat(12, 1fr) / repeat(12, 1fr);
 
@@ -50,7 +50,7 @@ export default {
       }
 
       p#title {
-        background: -webkit-linear-gradient($secondary-color, $tertiary-color);
+        background: -webkit-linear-gradient(var(--secondary-color), var(--tertiary-color));
         font-size: 5rem;
         font-weight: bold;
         line-height: 5rem;
@@ -74,7 +74,7 @@ export default {
       .link-btn {
         margin: auto;
         padding: .25rem 3rem;
-        background: -webkit-linear-gradient($secondary-color, $tertiary-color);
+        background: -webkit-linear-gradient(var(--secondary-color), var(--tertiary-color));
         box-shadow: 3px 3px 8px #000000aa;
         border-radius: 5px;
         font-size: 2rem;

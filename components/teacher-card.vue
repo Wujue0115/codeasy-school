@@ -46,7 +46,7 @@ export default {
       font-size: 2rem;
       line-height: 2rem;
       letter-spacing: 2px;
-      background: -webkit-linear-gradient($secondary-color, $tertiary-color);
+      background: -webkit-linear-gradient(var(--secondary-color), var(--tertiary-color));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
