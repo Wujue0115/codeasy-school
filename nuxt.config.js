@@ -36,6 +36,7 @@ export default {
 
   styleResources: {
     scss: [
+      '@/assets/css/variables.scss',
       '@/assets/css/mixins.scss'
     ]
   },
