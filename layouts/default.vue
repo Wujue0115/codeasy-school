@@ -2,7 +2,11 @@
   <div id="app" :class="[$store.getters.getThemeClassName]">
     <header>
       <div id="link-pane">
-        <NuxtLink class="btn link-btn" v-for="page in pages" :key="page.name" :to="page.link">{{ page.name }}</NuxtLink>
+        <NuxtLink 
+          :class="['btn', 'link-btn', $nuxt.$route.name === page.page ? 'link-btn-active' : '']" 
+          v-for="page in pages" :key="page.name" 
+          :to="page.link">{{ page.name }}
+        </NuxtLink>
       </div>
       <div id="theme-pane">
         <input 
@@ -27,10 +31,12 @@ export default {
       pages: [
         {
           name: "首頁",
+          page: "index",
           link: "/",
         },
         {
           name: "搜尋頁面",
+          page: "search",
           link: "/search",
         }
       ],
@@ -68,21 +74,23 @@ export default {
     @include flexbox(row, space-evenly);
     position: sticky;
     top: 0;
-    padding: .5rem 0;
+    padding: .75rem 0;
     width: 100vw;
     background-color: var(--secondary-color-a99);
     backdrop-filter: blur(3px);
 
     #link-pane {
       @include flexbox(row);
-  
       .link-btn {
-        padding: .25rem 1rem;
+        padding: 0 1rem;
         border-radius: 5px;
         font-size: 1.2rem;
         letter-spacing: 2px;
         color: #fff;
-        text-shadow: 2px 2px 4px #00000033;
+        text-shadow: 2px 2px 4px #00000055;
+      }
+      .link-btn-active {
+        background-color: var(--secondary-color);
       }
     }
   
