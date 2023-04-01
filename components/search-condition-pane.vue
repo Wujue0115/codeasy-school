@@ -74,7 +74,7 @@ export default {
   }
 
   #select-pane {
-    padding: .25rem 1rem .25rem .25rem;
+    padding: .25rem 2rem .25rem .25rem;
   }
 }
 </style>
