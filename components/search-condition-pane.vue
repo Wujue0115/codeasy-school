@@ -1,18 +1,18 @@
 <template>
   <div id="search-condition-pane">
     <!-- text -->
-    <input v-if="inputType === 'text'" id="text-pane" type="text" @input="$event => changeHandler($event)">
+    <input v-if="mainProps.type === 'text'" id="text-pane" v-bind="mainProps" @input="$event => changeHandler($event)">
 
     <!-- radio -->
-    <div v-if="inputType === 'radio'" id="radio-pane">
+    <div v-if="mainProps.type === 'radio'" id="radio-pane">
       <div v-for="item in availableData" :key="item">
-        <input type="radio" name="radio" :value="item" @change="$event => changeHandler($event)">
-        <label>{{ item === "male" ? "男" : "女" }}</label>
+        <input v-bind="mainProps" :value="item" @change="$event => changeHandler($event)">
+        <label>{{ item }}</label>
       </div>
     </div>
 
     <!-- select -->
-    <select v-if="inputType === 'select'" id="select-pane" @change="$event => changeHandler($event)">
+    <select v-if="mainProps.type === 'select'" v-bind="mainProps" id="select-pane" @change="$event => changeHandler($event)">
       <option v-for="item in availableData" :key="item" :value="item">{{ item }}</option>
     </select>
   </div>
@@ -26,15 +26,12 @@ export default {
     event: "change"
   },
   props: {
-    inputType: {
-      type: String,
+    mainProps: {
+      type: Object,
     },
     availableData: {
       type: Array,
     }
-  },
-  mounted() {
-    console.log(this.value)
   },
   methods: {
     changeHandler(event) {
@@ -49,8 +46,8 @@ export default {
   @include flexbox();
 
   #text-pane {
-    padding: .25rem;
-    font-size: 1.25rem;
+    padding: .5rem .5rem .25rem;
+    font-size: 1rem;
   }
 
   #radio-pane {
@@ -61,7 +58,7 @@ export default {
     div {
       @include flexbox(row);
       box-sizing: border-box;
-      padding: 0 1rem;
+      padding: 0 .5rem;
  
       input[type=radio] {
         width: 1rem;
