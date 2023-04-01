@@ -14,7 +14,19 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head() {
+    return {
+      title: "Codeasy School",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '尋找程式語言老師？立即加入 Codeasy School！在這裡，您可以快速找到適合您的老師，輕鬆開啟增加程式能力的學習之旅。快來探索我們的程式課程和一對一教學吧！'
+        }
+      ]
+    }
+  }
 }
 </script>
 

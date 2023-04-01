@@ -41,6 +41,18 @@ import TeacherCard from '@/components/teacher-card.vue';
 
 export default {
   name: "SearchPage",
+  head() {
+    return {
+      title: "Codeasy School Search Page",
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: '在 Codeasy School，透過快速便捷的搜尋功能，您可以找到完美符合您需求的程式語言老師。立即開啟學習之旅，提升您的程式能力！',
+        }
+      ]
+    }
+  },
   components: {
     TeacherCard,
     SearchConditionPane,
