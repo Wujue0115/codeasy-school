@@ -39,7 +39,7 @@ $ npm run generate
 - [x] 提供 Github 程式碼
 
 ## Detailed description
-此節透過專案結構來描述設計構想，包括後續的維護和沿用構思。
+此節會描述專案的設計構想，包括後續的維護和沿用構思。
 
 ### Main project structure
 ```
