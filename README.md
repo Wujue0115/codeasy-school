@@ -33,7 +33,7 @@ $ npm run generate
 &#9989; &nbsp; 可切換頁面 <br>
 &#9989; &nbsp; 設定 Global 參數讓頁面的顏色主題會隨著更換 <br>
 &#9989; &nbsp; 串接一組列表資料 API <br>
-&#9989; &nbsp; 程式架構做到最大的沿用性、維護性，並攥寫 Readme <br>
+&#9989; &nbsp; 程式架構做到最大的沿用性、維護性，並撰寫 Readme <br>
 &#9989; &nbsp; 部署至 Firebase Hosting <br>
 &#9989; &nbsp; 提供 Github 程式碼 <br>
 
