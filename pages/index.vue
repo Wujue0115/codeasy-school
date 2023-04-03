@@ -44,7 +44,7 @@ export default {
       flex-direction: column;
       justify-content: center;
       @include rwd($small-size) {
-        grid-area: 2 / 2 / span 6 / -2;
+        grid-area: 2 / 2 / span 5 / -2;
       }
 
       p {
@@ -74,6 +74,7 @@ export default {
         font-size: 1.5rem;
         color: #00000077;
         @include rwd($small-size) {
+          margin-top: 1rem;
           font-size: 1.25rem;
         }
       }
@@ -84,7 +85,7 @@ export default {
       grid-area: 2 / 8 / -2 / span 4;
       display: grid;
       @include rwd($small-size) {
-        grid-area: 8 / 2 / span 3 / -2;
+        grid-area: 7 / 2 / span 3 / -2;
       }
 
       .link-btn {
