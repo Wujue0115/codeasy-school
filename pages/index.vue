@@ -62,6 +62,10 @@ export default {
         line-height: 5rem;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @include rwd($small-size) {
+          text-align: center;
+          font-size: 4rem;
+        }
       }
 
       p#description {
@@ -69,6 +73,9 @@ export default {
         text-align: justify;
         font-size: 1.5rem;
         color: #00000077;
+        @include rwd($small-size) {
+          font-size: 1.25rem;
+        }
       }
 
     }
