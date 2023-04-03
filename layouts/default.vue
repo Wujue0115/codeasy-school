@@ -26,6 +26,13 @@
 <script>
 export default {
   name: "app",
+  head() {
+    return {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: this.faviconURL }
+      ]
+    }
+  },
   data() {
     return {
       pages: [
@@ -58,6 +65,11 @@ export default {
           color: "#f2eaf7",
         }
       ]
+    }
+  },
+  computed: {
+    faviconURL() {
+      return `/favicon-${this.$store.getters.getThemeMode}.ico?v=2`;
     }
   },
   methods: {
