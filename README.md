@@ -68,7 +68,7 @@ $ npm run generate
 ```
 
 ### Entry point (./pages/index.vue)
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/56119287/229328506-507c91b4-262a-4a40-b362-91f3575ede00.png"> &nbsp; <img height="305" alt="image" src="https://user-images.githubusercontent.com/56119287/229333738-53e3b229-907e-4952-bbe8-c8b4ca0afe60.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/56119287/229328506-507c91b4-262a-4a40-b362-91f3575ede00.png"> &nbsp; <img height="305" alt="image" src="https://user-images.githubusercontent.com/56119287/229395031-4777a64f-def9-4091-8896-fb811efb43b7.png">
 
 網頁首頁切分成左右兩部分，考慮到 RWD，因此將手機和平板切分成上下兩部分。<br>
 點擊 Start 按鈕會跳至搜尋教師頁面。
