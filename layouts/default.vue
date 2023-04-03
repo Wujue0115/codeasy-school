@@ -20,6 +20,10 @@
       </div>
     </header>
     <Nuxt />
+    <footer>
+      <div>Site designed by <a target="_blank" href="https://github.com/Wujue0115">Wujue</a>.</div>
+      <div>App favicon by <a target="_blank" href="https://icons8.com/icon/xl9eZco6hYkD/programming">Programming</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>.</div>
+    </footer>
   </div>
 </template>
 
@@ -124,6 +128,16 @@ export default {
           box-shadow: inset 1px 1px 3px #00000088;
         }
       }
+    }
+  }
+
+  footer {
+    width: 100vw;
+    padding: .5rem 0;
+    background-color: var(--secondary-color-a99);
+    @include flexbox(row, space-evenly);
+    @include rwd($small-size) {
+      @include flexbox(column);
     }
   }
 }
