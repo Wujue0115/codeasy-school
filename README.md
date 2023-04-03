@@ -4,6 +4,9 @@
 codeasy school 是一個提供程式教師資訊的實作練習網頁。
 透過 [https://mocki.io/](https://mocki.io/) 新增一個能取得教師資訊列表 API，再串接此 API 取得教師資訊，呈現於網頁中。
 
+### Reference
+- 網頁 favicon 取自 <a target="_blank" href="https://icons8.com/icon/xl9eZco6hYkD/programming">Programming</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
 ## Live demo
 [https://codeasy-school.wujue.dev/](https://codeasy-school.wujue.dev/)
 
@@ -65,18 +68,20 @@ $ npm run generate
 ```
 
 ### Entry point (./pages/index.vue)
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/56119287/229328506-507c91b4-262a-4a40-b362-91f3575ede00.png"> &nbsp; <img height="305" alt="image" src="https://user-images.githubusercontent.com/56119287/229333738-53e3b229-907e-4952-bbe8-c8b4ca0afe60.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/56119287/229328506-507c91b4-262a-4a40-b362-91f3575ede00.png"> &nbsp; <img height="305" alt="image" src="https://user-images.githubusercontent.com/56119287/229395031-4777a64f-def9-4091-8896-fb811efb43b7.png">
 
 網頁首頁切分成左右兩部分，考慮到 RWD，因此將手機和平板切分成上下兩部分。<br>
 點擊 Start 按鈕會跳至搜尋教師頁面。
 
-### Navigation Bar (./layouts/default.vue)
+### Header and Footer (./layouts/default.vue)
 <img width="765" alt="image" src="https://user-images.githubusercontent.com/56119287/229328847-81f7b7d8-f0f4-4b07-b08c-99003facc5ed.png">
-將 Navigation Bar 放在 layouts 檔案中，之後若新增其他頁面可以直接套用，不需在每一個頁面都寫入 header。<br>
-後續也可以繼續在這個檔案增加 footer。
+
+<img width="765" alt="image" src="https://user-images.githubusercontent.com/56119287/229394638-06d94b68-aa87-4401-9031-a7ee44d86490.png">
+
+將 Header 和 Footer 放在 layouts 檔案中，之後若新增其他頁面可以直接套用，不需在每一個頁面都寫一遍。<br>
 
 #### Theme color
-  - 在 Navigation Bar 上提供四種主題顏色如下圖，依序為綠色、藍色、橙色、紫色。
+  - 在 Header 上提供四種主題顏色如下圖，依序為綠色、藍色、橙色、紫色。
   
     <img height="30" alt="image" src="https://user-images.githubusercontent.com/56119287/229336497-60253649-fdb8-41b7-aee5-b7be7a2b0168.png"><br>
     
@@ -89,7 +94,7 @@ $ npm run generate
     <img width="600" alt="image" src="https://user-images.githubusercontent.com/56119287/229339718-04eaa801-4467-4fb7-80e0-776a334b961d.png">
     
   - 透過 global variable 設定不同主題顏色 class，再使用 Vuex 控制主題狀態
-  - 若是需增加主題，只要在 ./assets/css/variable.scss 中按照格式 (如下圖) 撰寫主題顏色，接著在 Navigation Bar 的頁面 (./layouts/default.vue) 增加顏色資料即可直接套用。
+  - 若是需增加主題，只要在 ./assets/css/variable.scss 中按照格式 (如下圖) 撰寫主題顏色，接著在 Header 的頁面 (./layouts/default.vue) 增加顏色資料即可直接套用。
   
      <img width="300" alt="image" src="https://user-images.githubusercontent.com/56119287/229336787-8056dfab-3f0e-41f8-8b61-7d1a6425980d.png">
 
