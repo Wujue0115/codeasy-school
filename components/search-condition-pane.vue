@@ -28,6 +28,16 @@ export default {
   props: {
     mainProps: {
       type: Object,
+      required: true,
+      validator: value => {
+        const supportType = ["text", "radio", "select"];
+        if (!supportType.includes(value.type)) {
+          console.warn(`The ${value.type} type of mainProps isn't support this component!`);
+          console.warn(`This component supports ${supportType.join(", ")} types.`);
+          return false;
+        }
+        return true;
+      }
     },
     availableData: {
       type: Array,

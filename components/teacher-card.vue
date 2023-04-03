@@ -26,6 +26,13 @@ export default {
   props: {
     rating: {
       type: Number, 
+      validator: value => {
+        if (!Number.isInteger(value) || value <= 0) {
+          console.warn("The rating prop must be a positive integer!");
+          return false;
+        }
+        return true;
+      }
     }
   },
 }
